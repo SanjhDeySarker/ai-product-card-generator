@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  width: 80%;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+}
