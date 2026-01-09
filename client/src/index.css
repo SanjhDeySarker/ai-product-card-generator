@@ -1,22 +1,132 @@
-body {
-  font-family: Arial;
-  background: #f4f4f4;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #d9e4f5);
+  min-height: 100vh;
+}
+
+/* App Container */
 .app {
   max-width: 600px;
-  margin: auto;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-input {
-  padding: 8px;
-  margin: 5px;
-  width: 80%;
+/* Title */
+.app h1 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
 }
 
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+  background: #357abd;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background: #9bbce4;
+  cursor: not-allowed;
+}
+
+/* Product Card */
 .card {
-  background: white;
+  margin-top: 30px;
   padding: 20px;
-  margin-top: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Tags */
+.card div {
+  margin-top: 15px;
+}
+
+.card span {
+  display: inline-block;
+  background: #e0ebff;
+  color: #2f5fd0;
+  padding: 5px 10px;
+  margin: 4px 6px 0 0;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Friendly */
+@media (max-width: 480px) {
+  .app {
+    margin: 30px 15px;
+    padding: 25px 20px;
+  }
 }
